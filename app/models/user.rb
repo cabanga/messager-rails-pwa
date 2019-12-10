@@ -5,4 +5,7 @@ class User < ApplicationRecord
   has_many :contacts
   has_many :sents, class_name: "Message", foreign_key: "sender_id"
   has_many :receiveds, class_name: "Message", foreign_key: "receiver_id"
+
+  validates :name, presence: true
+
 end
