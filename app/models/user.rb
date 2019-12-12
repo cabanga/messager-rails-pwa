@@ -9,5 +9,6 @@ class User < ApplicationRecord
   has_one_attached :photo
  
   validates :name, presence: true
-
+  validates :cell_phone, presence: true #, unique: true
+  validates_uniqueness_of :cell_phone
 end

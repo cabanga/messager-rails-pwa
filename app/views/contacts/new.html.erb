@@ -7,9 +7,9 @@
     <%= form_with model: @contact, local: true do |f| %>
       <%= f.fields_for :record do |uf| %>
         <div class="field">
-          <%= uf.label :email, class: "label has-text-white-ter" %>
+          <%= uf.label :cell_phone, class: "label has-text-white-ter" %>
           <div class="control">
-            <%= uf.email_field :email, class: "input #{ 'is-danger' if f.object.errors[:user].present? }"%>
+            <%= uf.email_field :cell_phone, class: "input #{ 'is-danger' if f.object.errors[:user].present? }"%>
           </div>
           <p class="help is-danger"><%= f.object.errors[:record].first %></p>
         </div>

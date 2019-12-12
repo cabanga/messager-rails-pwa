@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     end
     
     def create
-        user = User.find_by(email: contact_params[:record][:email])
+        user = User.find_by(cell_phone: contact_params[:record][:cell_phone])
         @contact = current_user.contacts.build(record: user)
         if @contact.save
             flash[:notice] = "Contact succesfully created"
