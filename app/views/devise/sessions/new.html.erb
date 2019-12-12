@@ -7,7 +7,7 @@
     <%= form_with(model: resource, as: resource_name, url: session_path(resource_name), local: true) do |f| %>
       <div class="field">
         <%= f.label :cell_phone %><br />
-        <%= f.email_field :cell_phone, autofocus: true, autocomplete: "email", class: "input" %>
+        <%= f.text_field :login, autofocus: true, autocomplete: "email", class: "input" %>
       </div>
 
       <div class="field">
