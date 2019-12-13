@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_100507) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "context"
+    t.text "content"
     t.integer "sender_id", null: false
     t.integer "receiver_id", null: false
     t.datetime "created_at", precision: 6, null: false

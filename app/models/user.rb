@@ -3,8 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :rememberable, :validatable, :authentication_keys => [:login]
   has_many :contacts
-  has_many :sents, class_name: "Message", foreign_key: "sender_id"
-  has_many :receiveds, class_name: "Message", foreign_key: "receiver_id"
+
+  has_many :sent, class_name: "Message", foreign_key: "sender_id"
+  has_many :received, class_name: "Message", foreign_key: "receiver_id"
 
   has_one_attached :photo
  
