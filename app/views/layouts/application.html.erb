@@ -16,7 +16,9 @@
         <div class="container">
           <div class="navbar-brand">
             <div class="navbar-item has-text-white-ter">
-              <%= link_to root_url do %>
+              <% if content_for?(:brand) %>
+                <%= yield :brand %>
+              <% else %>
                 <%= image_tag "logo-menu.png" %>
               <% end %>
             </div>
