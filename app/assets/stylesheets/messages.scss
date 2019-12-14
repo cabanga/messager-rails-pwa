@@ -16,7 +16,7 @@ div.columns.message {
    
       div.column {
         &.content {
-          color: $grey-darker;
+          color: #363636;;
           background-color: #99FF99;
         }
    
@@ -28,8 +28,8 @@ div.columns.message {
    
     &.receiver {
       div.column.content {
-        color: $black-ter;
-        background-color: $white-ter
+        color: #363636;;
+        background-color: #f2f2f2;
       }
     }
   }
