@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:334c37b39d10aa8080813ada63b42eae@pearlfish.redistogo.com:10654/
+  url: <%= ENV["REDISTOGO_URL"] %>
   channel_prefix: messager_rails_production
