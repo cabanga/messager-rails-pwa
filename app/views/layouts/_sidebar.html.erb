@@ -22,11 +22,20 @@
           <% end %>
         </li>
         <li>
+          <%= link_to integrantes_path do %>
+            <i class="fas fa-users"></i>
+            Integantes do grupo
+          <% end %>
+        </li>
+
+        <li>
           <%= link_to edit_user_registration_path do %>
             <i class="fas fa-cog"></i>
             Configurações
           <% end %>
         </li>
+
+
         <li>
           <%= link_to destroy_user_session_path, data: { method: :delete } do %>
             <i class="fas fa-sign-out-alt"></i>

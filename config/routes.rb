@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   get "/manifest.json", to: "service_workers#manifest"
   get "/service-worker.js"  => "service_workers#service_worker"
+  get "/integrantes"  => "home#integrantes", as: 'integrantes'
 
   resources :contacts, only: %i(index new create destroy)
   resources :chats, only: %i(index show) do

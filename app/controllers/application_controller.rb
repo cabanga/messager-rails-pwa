@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     end
 
     Warden::Manager.before_logout do |user,auth,opts|
-        user.update(is_online: false)
+        user.update(is_online: true)
         StatusUpdaterJob.perform_now(user)
     end
 
