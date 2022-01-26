@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: redis://redistogo:334c37b39d10aa8080813ada63b42eae@pearlfish.redistogo.com:10654/
   channel_prefix: messager_rails_production
